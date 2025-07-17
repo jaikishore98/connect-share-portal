@@ -1,7 +1,7 @@
 {
-  "name": "Employee Portal",
+  "name": "Prodian Portal",
   "short_name": "Portal",
-  "description": "Company employee portal for sharing thoughts and connecting with colleagues",
+  "description": "Company prodian portal for sharing thoughts and connecting with colleagues",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",

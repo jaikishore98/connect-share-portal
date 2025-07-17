@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Building2, Users, MessageCircle } from 'lucide-react';
+import Jai_Kishore  from '@/assets/Jai_Kishore.jpg';
 
 interface LoginPageProps {
   onLogin: (userData: { name: string; email: string; avatar: string }) => void;
@@ -18,9 +19,9 @@ export const LoginPage = ({ onLogin }: LoginPageProps) => {
     // For now, simulate login with mock data
     setTimeout(() => {
       onLogin({
-        name: 'John Doe',
-        email: 'john.doe@company.com',
-        avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face'
+        name: 'Jaikishore',
+        email: 'jai.kishore@prodian.co.in',
+        avatar: Jai_Kishore
       });
       setIsLoading(false);
     }, 1500);
@@ -34,7 +35,7 @@ export const LoginPage = ({ onLogin }: LoginPageProps) => {
           <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-corporate rounded-full mb-4">
             <Building2 className="w-8 h-8 text-primary-foreground" />
           </div>
-          <h1 className="text-3xl font-bold text-foreground mb-2">Employee Portal</h1>
+          <h1 className="text-3xl font-bold text-foreground mb-2">Prodian Portal</h1>
           <p className="text-muted-foreground">Connect, share, and collaborate with your team</p>
         </div>
 
@@ -59,7 +60,7 @@ export const LoginPage = ({ onLogin }: LoginPageProps) => {
           <CardHeader>
             <CardTitle>Welcome Back</CardTitle>
             <CardDescription>
-              Sign in to your company account to access the employee portal
+              Sign in to your company account to access the prodian portal
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-6">
@@ -101,7 +102,7 @@ export const LoginPage = ({ onLogin }: LoginPageProps) => {
                 <Input 
                   id="email" 
                   type="email" 
-                  placeholder="your.email@company.com"
+                  placeholder="your.name@prodian.co.in"
                   className="h-10"
                 />
               </div>

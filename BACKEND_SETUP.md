@@ -1,7 +1,7 @@
-# Java Backend Setup for Employee Portal
+# Java Backend Setup for Prodian Portal
 
 ## Overview
-This document provides essential setup instructions for creating a Java backend to support the Employee Portal Progressive Web Application.
+This document provides essential setup instructions for creating a Java backend to support the Prodian Portal Progressive Web Application.
 
 ## Tech Stack Recommendation
 - **Framework**: Spring Boot 3.x
@@ -375,7 +375,7 @@ CREATE TABLE comments (
 ### 1. Register Application in Azure Portal
 1. Go to Azure Active Directory → App registrations
 2. Create new registration:
-   - Name: Employee Portal API
+   - Name: Prodian Portal API
    - Supported account types: Accounts in this organizational directory only
    - Redirect URI: http://localhost:8080/login/oauth2/code/azure
 
@@ -487,4 +487,4 @@ class PostControllerIntegrationTest {
 8. **Write Tests** - Create comprehensive unit and integration tests
 9. **Deploy** - Deploy to your chosen environment
 
-This setup provides a solid foundation for your Employee Portal backend with Microsoft SSO integration, file upload capabilities, and a RESTful API structure.
+This setup provides a solid foundation for your Prodian Portal backend with Microsoft SSO integration, file upload capabilities, and a RESTful API structure.
