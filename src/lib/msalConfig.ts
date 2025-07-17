@@ -3,8 +3,8 @@ import { Configuration, PublicClientApplication } from '@azure/msal-browser';
 // MSAL configuration
 export const msalConfig: Configuration = {
   auth: {
-    clientId: 'YOUR_CLIENT_ID', // Replace with your Azure AD Client ID
-    authority: 'https://login.microsoftonline.com/YOUR_TENANT_ID', // Replace with your tenant ID
+    clientId: 'cb6bb5ff-6792-4428-820c-a6ee76abf4b5', // Replace with your Azure AD Client ID
+    authority: 'https://login.microsoftonline.com/a1152b72-d27b-421d-a487-0ca747aa4688', // Replace with your tenant ID
     redirectUri: window.location.origin,
     postLogoutRedirectUri: window.location.origin,
   },
