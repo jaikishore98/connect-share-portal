@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { useMsal } from '@azure/msal-react';
+import { loginRequest } from '@/lib/msalConfig';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -12,19 +14,26 @@ interface LoginPageProps {
 
 export const LoginPage = ({ onLogin }: LoginPageProps) => {
   const [isLoading, setIsLoading] = useState(false);
+  const { instance } = useMsal();
 
   const handleMicrosoftLogin = async () => {
     setIsLoading(true);
-    // TODO: Implement Microsoft SSO
-    // For now, simulate login with mock data
-    setTimeout(() => {
-      onLogin({
-        name: 'Jaikishore',
-        email: 'jai.kishore@prodian.co.in',
-        avatar: Jai_Kishore
-      });
+    try {
+      const loginResponse = await instance.loginPopup(loginRequest);
+      
+      if (loginResponse.account) {
+        const { name, username } = loginResponse.account;
+        onLogin({
+          name: name || 'Unknown User',
+          email: username,
+          avatar: Jai_Kishore // You can update this to use profile picture from Microsoft Graph
+        });
+      }
+    } catch (error) {
+      console.error('Login failed:', error);
+    } finally {
       setIsLoading(false);
-    }, 1500);
+    }
   };
 
   return (
